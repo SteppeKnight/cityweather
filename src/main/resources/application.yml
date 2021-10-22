@@ -1,0 +1,23 @@
+
+server:
+  tomcat:
+    additional-tld-skip-patterns: '*.jar'
+    accesslog:
+      enabled: true
+  port: ${PORT:8081}
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+    context-path: ${CONTEXT_PATH:/}
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    properties:
+      javax:
+        persistence:
+          validation:
+            mode: none
